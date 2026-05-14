@@ -489,8 +489,16 @@
       .hero { padding: 110px 6% 70px; }
       .hero-image-wrap { flex: 0 0 100%; max-width: 500px; margin: 0 auto; }
       .about { flex-direction: column-reverse; gap: 48px; }
-      .about-img-wrap { width: 100%; text-align: center; }
-      .about-img-wrap img { width: 280px; height: 340px; margin: 0 auto; }
+      .about-img-wrap { width: 100%; flex: 0 0 auto; text-align: center; }
+      .about-img-wrap img {
+        width: 100%;
+        max-width: 340px;
+        height: auto;
+        object-fit: contain;
+        object-position: top;
+        margin: 0 auto;
+      }
+      .about-img-wrap::after { display: none; }
       .contact-wrap { flex-direction: column; gap: 40px; }
     }
     @media (max-width: 640px) {
